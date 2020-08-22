@@ -4,12 +4,12 @@ pipeline{
        maven 'Maven3.6.3'
 	}
   stages {
-       stages('SCM Checkout') {
+       stage('SCM CheckOut') {
  	  steps {
  		 git 'http://github.com/Herafatimaalvi/TestApp'
 		}
 	  }
-	stage('Compile-package') {
+	stage('Compile-Package') {
 	   steps {
 		sh "mvn -version"
 		sh "mvn clean install"
