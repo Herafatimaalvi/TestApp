@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
   agent any
   tools { 
        maven 'Maven3.6.3'
@@ -6,7 +6,7 @@ pipeline{
   stages {
        stage('SCM CheckOut') {
  	  steps {
- 		 git 'http://github.com/Herafatimaalvi/TestApp'
+ 		 git 'https://github.com/Herafatimaalvi/TestApp'
 		}
 	  }
 	stage('Compile-Package') {
